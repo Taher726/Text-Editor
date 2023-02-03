@@ -1,0 +1,106 @@
+/*Import Font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/*Body*/
+body{
+    background-color: #4A98F7;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+/*Main Container*/
+.container{
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+/*All elements inside the main container*/
+.container :where(textarea, input, button, select){
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 17px;
+}
+/*textarea*/
+.container textarea{
+    height: 270px;
+    resize: none;
+    border: 1px solid gray;
+    padding: 10px;
+}
+/*options*/
+.container .options{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.options .option{
+    width: calc(100% / 2 - 8px);
+}
+.option :where(input, .select-menu){
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-top: 6px;
+}
+.option .select-menu select{
+    height: 50px;
+    background: none;
+}
+/*Changes*/
+.container .choose{
+    background-color: gray;
+    color: white;
+}
+.changes{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.changes button{
+    width: calc(100% / 2 - 8px);
+    padding: 7px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.changes .choose:hover{
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+}
+.changes .reset{
+    background-color: white;
+    color: gray;
+    border: 1px solid gray;
+}
+.changes .reset:hover{
+    background-color: gray;
+    color: white;
+}
+/*Save as button*/
+.container .save-as-btn{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4A98F7;
+    padding: 10px;
+    color: white;
+    transition: all 0.3s linear;
+}
+.container .save-as-btn:hover{
+    filter: brightness(0.9);
+}
